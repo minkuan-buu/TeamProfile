@@ -1,0 +1,832 @@
+:root {
+    /* --- BẢNG MÀU CHẾ ĐỘ SÁNG (LIGHT) --- */
+    --primary-pink: #ffb7c5;
+    --deep-purple: #5d3a9b;
+    --paper-bg: #fffbf0;
+    --main-bg: #f0f0f0;
+    --card-bg: #ffffff;
+    --box-bg: #fff0f5;
+    /* Màu nền cho các hộp phụ (preview, bảng) */
+    --text-color: #333333;
+    --text-sub: #666666;
+    --border-color: #000000;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* --- BẢNG MÀU CHẾ ĐỘ TỐI (DARK) --- */
+[data-theme="dark"] {
+    --primary-pink: #b65168;
+    --deep-purple: #b39ddb;
+    --paper-bg: #2d2d2d;
+    --main-bg: #1a1a1a;
+    --card-bg: #333333;
+    --box-bg: #404040;
+    /* Chuyển hộp phụ sang màu xám đậm */
+    --text-color: #f0f0f0;
+    --text-sub: #cccccc;
+    --border-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.browser-window {
+    background-color: var(--paper-bg);
+    width: 99%;
+    max-width: none;
+    border: 3px solid var(--primary-pink);
+    border-radius: 15px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER & NAVIGATION --- */
+.browser-header {
+    background-color: var(--primary-pink);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+}
+
+.nav-buttons span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.url-bar {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin-left: 20px;
+    flex-grow: 1;
+    color: #888;
+}
+
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 5rem;
+    color: var(--deep-purple);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 0px var(--shadow-color);
+}
+
+/* --- SEARCH BOX --- */
+.search-container {
+    border: 2px solid var(--text-color);
+    /* Viền đổi theo theme */
+    border-radius: 20px;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    background: var(--card-bg);
+    width: 400px;
+    max-width: 90%;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+#searchInput {
+    border: none;
+    outline: none;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+    width: 100%;
+    background: transparent;
+    color: var(--text-color);
+}
+
+/* --- GRID SYSTEM (3 CỘT) --- */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px;
+    flex-grow: 1;
+}
+
+/* --- MEMBER CARD (BÊN NGOÀI) --- */
+.member-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border: 3px dashed var(--primary-pink);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    box-shadow: 5px 5px 15px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.member-card:hover {
+    transform: scale(1.02) rotate(-1deg);
+    border-style: solid;
+    box-shadow: 12px 12px 0px rgba(93, 58, 155, 0.15);
+    z-index: 10;
+}
+
+/* Style cho phần mô tả ngắn trên card */
+/* FIX: Dùng biến --box-bg để Dark Mode không bị trắng bệch */
+.card-short-preview {
+    background: var(--box-bg);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    color: var(--text-sub);
+    /* Chữ màu xám, dark mode sẽ sáng lên */
+    margin: 15px 0;
+    font-style: italic;
+    border: 1px dotted var(--primary-pink);
+}
+
+.member-card .member-contact {
+    display: none;
+}
+
+.member-contact a {
+    font-size: 1.3rem;
+    color: var(--deep-purple);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #eee;
+    /* Giữ màu xám nhẹ cho placeholder */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 5rem;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.member-name {
+    font-weight: bold;
+    font-size: 2.2rem;
+    color: var(--deep-purple);
+    margin: 15px 0 5px 0;
+}
+
+.member-role {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--text-sub);
+    font-weight: bold;
+}
+
+/* --- INFO SECTION (Bảng phân công) --- */
+.info-section {
+    padding: 40px;
+    background-color: var(--box-bg);
+    /* Dùng biến để đổi màu theo theme */
+    margin: 0 40px 40px 40px;
+    border-radius: 15px;
+    border: 2px solid var(--primary-pink);
+}
+
+.section-title {
+    color: var(--deep-purple);
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid var(--deep-purple);
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: var(--primary-pink);
+    color: white;
+    text-transform: uppercase;
+}
+
+/* --- FOOTER --- */
+.footer-bar {
+    background-color: var(--primary-pink);
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--deep-purple);
+    border-top: 2px solid #fff;
+}
+
+
+/* ========================================= */
+/* PHẦN STYLE CHO MODAL (POPUP) - ĐÃ CHỈNH */
+/* ========================================= */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-container {
+    background-color: var(--card-bg);
+    border: 4px solid var(--border-color);
+    /* Viền đen hoặc trắng */
+    color: var(--text-color);
+    border-radius: 15px;
+    /* Bỏ bo tròn để giống khung tranh 4x5 trong hình vẽ */
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 15px 15px 0px rgba(93, 58, 155, 0.3);
+    animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--deep-purple);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--primary-pink);
+}
+
+/* Layout bên trong Modal */
+.modal-top-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+/* Cột trái: Avatar 4x5 - FIX THEO HÌNH VẼ */
+.modal-avatar-box {
+    flex: 4;
+    border: 4px solid var(--border-color);
+    /* Viền đậm */
+    padding: 0;
+    /* Bỏ padding để ảnh sát viền nếu muốn */
+    background: white;
+    aspect-ratio: 4 / 5;
+    /* Chuẩn tỉ lệ 4x5 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.avatar-content {
+    font-size: 8rem;
+    line-height: 1;
+}
+
+/* Cột phải: Thông tin */
+.modal-info-box {
+    flex: 6;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Căn giữa nội dung theo chiều dọc */
+}
+
+#modalName {
+    font-size: 3.5rem;
+    color: var(--deep-purple);
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.modal-role-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.modal-hobbies-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-pink);
+}
+
+.modal-list-style {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+.modal-list-style li {
+    margin-bottom: 5px;
+}
+
+.modal-list-style li::before {
+    content: "✨";
+    margin-right: 8px;
+}
+
+/* Phần dưới: Mô tả ngắn - FIX THEO HÌNH VẼ */
+.modal-bottom-section {
+    border: 4px solid var(--border-color);
+    border-radius: 15px;
+    /* Viền đậm */
+    background: var(--card-bg);
+    padding: 25px;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Nhãn "Mô tả ngắn" bay lơ lửng */
+.description-box-title {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: var(--primary-pink);
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 2px solid var(--border-color);
+    transform: rotate(-2deg);
+}
+
+.description-content {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.description-content p {
+    margin: 10px 0;
+}
+
+.description-content p::before {
+    content: "🖊️ ";
+    margin-right: 5px;
+}
+
+/* ========================================= */
+/* STYLE CHO SECTION MEMORIES (POLAROID)     */
+/* ========================================= */
+
+.memories-section {
+    padding: 40px;
+    background-color: var(--box-bg);
+    /* Dùng màu nền giống bảng phân công */
+    margin: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--primary-pink);
+    text-align: center;
+}
+
+.memory-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Căn giữa các ảnh */
+    gap: 40px;
+    /* Khoảng cách giữa các ảnh */
+    margin-top: 30px;
+}
+
+/* Khung ảnh Polaroid */
+.polaroid-item {
+    background-color: var(--card-bg);
+    /* Trắng ở Light, Xám ở Dark */
+    padding: 15px 15px 40px 15px;
+    /* Padding dưới dày hơn để viết chữ */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    /* Độ rộng cố định */
+    transition: transform 0.3s;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+/* Hiệu ứng khi di chuột vào ảnh */
+.polaroid-item:not(.polaroid-clone):hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    /* Phóng to và xoay thẳng lại */
+    z-index: 10;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.photo-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* Ảnh luôn vuông */
+    overflow: hidden;
+    background-color: #eee;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cắt ảnh vừa khung mà không bị méo */
+}
+
+.caption {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-top: 10px;
+    line-height: 1.2;
+}
+
+/* --- TẠO HIỆU ỨNG BĂNG DÍNH (WASHI TAPE) --- */
+.tape {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255, 183, 197, 0.6);
+    /* Màu hồng trong suốt */
+    opacity: 0.8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+/* RESPONSIVE CHO MEMORIES */
+@media (max-width: 700px) {
+    .memories-section {
+        margin: 20px 10px;
+        padding: 20px 10px;
+    }
+
+    .polaroid-item {
+        width: 45%;
+        /* Trên điện thoại thì xếp 2 ảnh 1 hàng */
+        margin-bottom: 20px;
+    }
+
+    .caption {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .polaroid-item {
+        width: 100%;
+        /* Màn hình bé quá thì xếp 1 ảnh 1 hàng */
+    }
+}
+
+
+/* ========================================= */
+/* RESPONSIVE                                */
+/* ========================================= */
+
+@media (max-width: 900px) {
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .avatar-placeholder {
+        height: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    /* --- TỐI ƯU MODAL MOBILE --- */
+    .modal-container {
+        padding: 20px 15px;
+        width: 95%;
+        max-height: 85vh;
+    }
+
+    .close-btn {
+        top: 5px;
+        right: 10px;
+        font-size: 2.5rem;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-top-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .modal-avatar-box {
+        width: 70%;
+        max-width: 250px;
+        height: auto;
+        align-self: center;
+    }
+
+    .avatar-content {
+        font-size: 4rem;
+    }
+
+    .modal-info-box {
+        text-align: center;
+        width: 100%;
+    }
+
+    #modalName {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .modal-role-text {
+        font-size: 1.3rem;
+    }
+
+    .modal-bottom-section {
+        margin-top: 35px;
+    }
+
+    .description-box-title {
+        font-size: 1rem;
+        padding: 3px 10px;
+        top: -15px;
+    }
+
+    .description-content {
+        font-size: 1.1rem;
+    }
+}
+
+/* FIX BẢNG RESPONSIVE (DARK MODE) */
+@media (max-width: 700px) {
+    .info-section {
+        margin: 20px 10px;
+        padding: 20px 10px;
+    }
+
+    .info-table,
+    .info-table tbody,
+    .info-table tr,
+    .info-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info-table thead {
+        display: none;
+    }
+
+    .info-table tr {
+        margin-bottom: 20px;
+        background: var(--card-bg);
+        /* FIX: Dùng biến màu nền thay vì white */
+        border: 2px dashed var(--deep-purple);
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-table td {
+        padding: 12px 0;
+        border: none;
+        border-bottom: 1px dashed var(--text-sub);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+
+    .info-table td:last-child {
+        border-bottom: none;
+    }
+
+    .info-table td:nth-of-type(1)::before {
+        content: "👤 Thành viên:";
+        font-weight: bold;
+        color: var(--deep-purple);
+        margin-right: 10px;
+    }
+
+    .info-table td:nth-of-type(2)::before {
+        content: "⭐ Vai trò:";
+        font-weight: bold;
+        color: var(--deep-purple);
+        margin-right: 10px;
+    }
+
+    .info-table td:nth-of-type(3)::before {
+        content: "📧 Email:";
+        font-weight: bold;
+        color: var(--deep-purple);
+        margin-right: 10px;
+    }
+}
+
+/* NÚT CHUYỂN GIAO DIỆN */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-pink);
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 480px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .footer-bar {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .browser-window {
+        width: 100%;
+        border-width: 0;
+        min-height: 100vh;
+    }
+
+    .nav-icons {
+        display: none;
+    }
+
+    .main-header {
+        padding: 15px 5px;
+    }
+
+    .search-container {
+        width: 90%;
+        padding: 5px 15px;
+    }
+
+    #searchInput {
+        font-size: 1.2rem;
+    }
+}
+
+.avatar-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Giúp ảnh tự cắt để vừa khung mà không bị méo */
+    display: block;
+}
+
+/* ========================================= */
+/* Nền tối đằng sau */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    /* Không chặn click khi ẩn */
+    transition: opacity 0.3s ease;
+    z-index: 998;
+    /* Nằm dưới ảnh đang zoom */
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    /* Cho phép click để đóng */
+}
+
+/* Class cho bản sao (Clone) */
+.polaroid-clone {
+    position: fixed;
+    z-index: 999;
+    /* Transition cho Top, Left, Width, Height và Transform */
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: center center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.polaroid-clone.zoomed {
+    /* KHÔNG DÙNG top: 50%, left: 50% ở đây nữa */
+    /* KHÔNG DÙNG translate(-50%, -50%) nữa */
+
+    /* Chỉ thay đổi bóng đổ và z-index */
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Ẩn ảnh gốc khi đang zoom */
+.polaroid-item.hidden-placeholder {
+    opacity: 0;
+    visibility: hidden;
+}

@@ -1,0 +1,39 @@
+{
+    "memories": [
+        {
+            "alt": "trung-thu-lop-10",
+            "image": "./assets/memories/trung-thu-lop-10.jpg",
+            "caption": "Trung thu lớp 10"
+        },
+        {
+            "alt": "tong-ket-lop-11",
+            "image": "./assets/memories/tong-ket-lop-11.PNG",
+            "caption": "Tổng kết lớp 11"
+        },
+        {
+            "alt": "dua-gion-trong-tiet-hoc",
+            "image": "./assets/memories/dua-gion-trong-tiet-hoc.PNG",
+            "caption": "Đùa giỡn trong tiết học"
+        },
+        {
+            "alt": "thi-nghiem-sinh",
+            "image": "./assets/memories/thi-nghiem-sinh.jpg",
+            "caption": "Thí nghiệm sinh"
+        },
+        {
+            "alt": "chua-co-tieu-de-2",
+            "image": "./assets/memories/chua-co-tieu-de-2.HEIC",
+            "caption": "Chưa có tiêu đề 2"
+        },
+        {
+            "alt": "chua-co-tieu-de-3",
+            "image": "./assets/memories/chua-co-tieu-de-3.JPG",
+            "caption": "Chưa có tiêu đề 3"
+        },
+        {
+            "alt": "chua-co-tieu-de-4",
+            "image": "./assets/memories/chua-co-tieu-de-4.JPG",
+            "caption": "Chưa có tiêu đề 4"
+        }
+    ]
+}

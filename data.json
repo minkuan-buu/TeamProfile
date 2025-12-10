@@ -1,0 +1,108 @@
+{
+    "members": [
+        {
+            "avatar": "./assets/avatar/phuong-anh.JPG",
+            "name": "Nguyễn Phương Anh",
+            "dateofbirth": "02/02/2008",
+            "role": "Nhóm trưởng gương mẫu",
+            "short-description": [
+                "Thích: Đọc sách, nghe nhạc",
+                "Ghét: Deadline sát giờ"
+            ],
+            "hobbies": [
+                "Đọc sách",
+                "Nghe nhạc",
+                "Make up",
+                "Bồ"
+            ],
+            "contact": {
+                "instagram": "@_mochi_0202_"
+            }
+        },
+        {
+            "avatar": "😎",
+            "name": "Thân Hoàng Khánh Ngọc",
+            "dateofbirth": "04/01/2008",
+            "role": "Cool ngầu girl",
+            "short-description": [
+                "Sở thích: Đang cập nhật...",
+                "Style: Bí ẩn"
+            ],
+            "hobbies": [
+                "Tạm thời chưa nghĩ ra"
+            ],
+            "contact": {
+                "instagram": "@_.khanhsngocx._"
+            }
+        },
+        {
+            "avatar": "🤓",
+            "name": "Nguyễn Thanh Thư",
+            "dateofbirth": "05/07/2008",
+            "role": "Thư ký tận tâm",
+            "short-description": [
+                "Tâm hồn ăn uống",
+                "Mê các món Fastfood & Cơm tấm"
+            ],
+            "hobbies": [
+                "Ăn pizza",
+                "Ăn khoai tây chiên",
+                "Ăn cơm tấm",
+                "Ăn hamburger"
+            ],
+            "contact": {
+                "instagram": "ngn.hnshthw."
+            }
+        },
+        {
+            "avatar": "🤸‍♀️",
+            "name": "Nguyễn Đoàn Lâm Mai",
+            "dateofbirth": "26/05/2008",
+            "role": "Năng động hoạt bát",
+            "short-description": [
+                "Món tủ: Chuối chiên",
+                "Luôn tràn đầy năng lượng"
+            ],
+            "hobbies": [
+                "Chuối chiên"
+            ],
+            "contact": {
+                "instagram": "@_.ndlaamai._"
+            }
+        },
+        {
+            "avatar": "👩",
+            "name": "Lâm Cao Thanh Hà",
+            "dateofbirth": "18/09/2008",
+            "role": "Em út đáng yêu",
+            "short-description": [
+                "Gamer chính hiệu",
+                "Đam mê đồ ngọt"
+            ],
+            "hobbies": [
+                "Chơi game",
+                "Ăn đồ ngọt"
+            ],
+            "contact": {
+                "instagram": "@hmi_hapis_tina"
+            }
+        },
+        {
+            "avatar": "./assets/avatar/anh-hong.JPG",
+            "name": "Nguyễn Phạm Ánh Hồng",
+            "dateofbirth": "13/05/2008",
+            "role": "Cây văn nghệ",
+            "short-description": [
+                "Fan cứng K-pop",
+                "Thích trang trí sổ tay (Bullet journal)"
+            ],
+            "hobbies": [
+                "Nhạc K-pop",
+                "Bullet journal"
+            ],
+            "contact": {
+                "facebook": "https://www.facebook.com/anh.hong.955297?locale=vi_VN"
+            }
+        }
+    ]
+}

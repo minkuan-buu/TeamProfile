@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELISA GENGZ - Group Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="browser-window">
+        <header class="browser-header">
+            <div class="nav-buttons">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-icons" style="margin-left: 10px;">⬅ ➡ 🏠</div>
+            <div class="url-bar">https://www.elisagengz.group</div>
+        </header>
+
+        <div class="main-header">
+            <h1>ELISA GENGZ</h1>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Tìm tên hoặc sở thích...">
+            </div>
+        </div>
+
+        <main class="members-grid" id="membersGrid">
+
+            <!-- <div class="member-card">
+                <div class="avatar-placeholder">👩‍🦰</div>
+                <div class="member-name">Phương Anh</div>
+                <div class="member-role">Nhóm trưởng gương mẫu</div>
+                <ul class="hobbies-list">
+                    <li>Thích: Đọc sách, trà sữa</li>
+                    <li>Ghét: Deadline sát giờ</li>
+                </ul>
+            </div>
+
+            <div class="member-card">
+                <div class="avatar-placeholder">🎀</div>
+                <div class="member-name">Ánh Hồng</div>
+                <div class="member-role">Cây văn nghệ</div>
+                <ul class="hobbies-list">
+                    <li>Sở trường: Hát, Múa</li>
+                    <li>Sở đoản: Dậy sớm</li>
+                </ul>
+            </div>
+
+            <div class="member-card">
+                <div class="avatar-placeholder">😎</div>
+                <div class="member-name">Khánh Ngọc</div>
+                <div class="member-role">Cool ngầu boy</div>
+                <ul class="hobbies-list">
+                    <li>Thích: Game, Rap</li>
+                    <li>Style: Streetwear</li>
+                </ul>
+            </div>
+
+            <div class="member-card">
+                <div class="avatar-placeholder">🤸‍♀️</div>
+                <div class="member-name">Lâm Mai</div>
+                <div class="member-role">Năng động hoạt bát</div>
+                <ul class="hobbies-list">
+                    <li>Thích: Thể thao</li>
+                    <li>Món tủ: Bánh tráng trộn</li>
+                </ul>
+            </div>
+
+            <div class="member-card">
+                <div class="avatar-placeholder">🤓</div>
+                <div class="member-name">Thanh Thư</div>
+                <div class="member-role">Thư ký tận tâm</div>
+                <ul class="hobbies-list">
+                    <li>Thích: Ghi chép</li>
+                    <li>Ghét: Sự lộn xộn</li>
+                </ul>
+            </div>
+
+            <div class="member-card">
+                <div class="avatar-placeholder">👩</div>
+                <div class="member-name">Thanh Hà</div>
+                <div class="member-role">Em út đáng yêu</div>
+                <ul class="hobbies-list">
+                    <li>Thích: Mèo, Màu hồng</li>
+                    <li>Sợ: Gián</li>
+                </ul>
+            </div> -->
+        </main>
+
+        <div id="noResult" style="display: none; text-align: center; font-size: 1.5rem; padding-bottom: 40px;">
+            Không tìm thấy thành viên nào phù hợp 😿
+        </div>
+
+        <section class="info-section">
+            <h3 class="section-title">📅 Phân Công Nhiệm Vụ</h3>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Thành viên</th>
+                        <th>Vai trò</th>
+                        <th>Email liên hệ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phương Anh</td>
+                        <td>Leader / Content</td>
+                        <td>panh@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Khánh Ngọc</td>
+                        <td>Designer / Media</td>
+                        <td>kngoc@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Thanh Thư</td>
+                        <td>Hậu cần</td>
+                        <td>tthu@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="memories-section">
+            <h3 class="section-title">📸 Góc Kỷ Niệm</h3>
+            <div class="memory-grid" id="memory-grid">
+            </div>
+        </section>
+
+        <footer class="footer-bar">
+            <div>📞 HOTLINE: 1802080813</div>
+            <div>📸 IG: e._elisagang._</div>
+            <div>⭐ RATING: ⭐⭐⭐⭐⭐</div>
+        </footer>
+    </div>
+
+    <div id="memberModal" class="modal-overlay">
+        <div class="modal-container">
+            <span class="close-btn">&times;</span>
+
+            <div class="modal-top-section">
+                <div class="modal-avatar-box">
+                    <div id="modalAvatar" class="avatar-content">👩‍🦰</div>
+                </div>
+
+                <div class="modal-info-box">
+                    <h2 id="modalName">Tên Thành Viên</h2>
+                    <div id="modalRole" style="color: var(--text-sub);" class="modal-role-text">Role ở đây</div>
+                    <div style="font-size: 1.3rem; margin-bottom: 10px;">🎂 <span id="modalDob"></span>
+                    </div>
+
+                    <div class="modal-hobbies-title">Sở thích:</div>
+                    <ul id="modalHobbiesList" class="hobbies-list modal-list-style">
+                    </ul>
+
+                    <div id="modalContact" class="member-contact"
+                        style="font-size: 1.3rem; margin-top: 15px; font-weight: bold; color: var(--deep-purple);">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-bottom-section">
+                <div class="description-box-title">Mô tả ngắn:</div>
+                <div id="modalDescription" class="description-content">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <button id="themeToggle" class="theme-toggle-btn" title="Chuyển chế độ Sáng/Tối">
+        🌞
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
