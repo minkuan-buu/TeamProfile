@@ -20,7 +20,7 @@
             }
         },
         {
-            "avatar": "😎",
+            "avatar": "./assets/avatar/khanh-ngoc.jpg",
             "name": "Thân Hoàng Khánh Ngọc",
             "dateofbirth": "04/01/2008",
             "role": "Cool ngầu girl",
@@ -36,7 +36,7 @@
             }
         },
         {
-            "avatar": "🤓",
+            "avatar": "./assets/avatar/thanh-thu.jpg",
             "name": "Nguyễn Thanh Thư",
             "dateofbirth": "05/07/2008",
             "role": "Thư ký tận tâm",
@@ -55,7 +55,7 @@
             }
         },
         {
-            "avatar": "🤸‍♀️",
+            "avatar": "./assets/avatar/lam-mai.png",
             "name": "Nguyễn Đoàn Lâm Mai",
             "dateofbirth": "26/05/2008",
             "role": "Năng động hoạt bát",
@@ -71,7 +71,7 @@
             }
         },
         {
-            "avatar": "👩",
+            "avatar": "./assets/avatar/thanh-ha.jpg",
             "name": "Lâm Cao Thanh Hà",
             "dateofbirth": "18/09/2008",
             "role": "Em út đáng yêu",

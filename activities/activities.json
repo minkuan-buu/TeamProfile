@@ -1,0 +1,58 @@
+{
+    "activities": [
+        {
+            "id": 1,
+            "name": "Làm cơm trộn",
+            "date": "14/05/2025",
+            "location": "Lớp học",
+            "plan": "panh chiên trứng, lmai nấu cơm,...",
+            "comment": "hên là hong ai bị đau bụng hihi ^^",
+            "image": "../assets/activities/lam-com-tron.png"
+        },
+        {
+            "id": 2,
+            "name": "Tổ chức sinh nhật cho Ánh Hồng",
+            "date": "13/05/2025",
+            "location": "Lớp học",
+            "plan": "sáng mua bánh kem,...",
+            "comment": "Me and my girlies, we gon' party 'til it's early, got me feeling otherworldly tonight",
+            "image": "../assets/activities/to-chuc-sinh-nhat-cho-anh-hong.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Chơi Secret Santa",
+            "date": "22/12/2025",
+            "location": "Lớp học",
+            "plan": "mỗi người chuẩn bị một phần quà handmade sau đó đem tặng nhau lần lượt",
+            "comment": "All I want for christmas is my girls",
+            "image": "../assets/activities/secret-santa.JPG"
+        },
+        {
+            "id": 4,
+            "name": "Chụp hình Tết",
+            "date": "01/01/2026",
+            "location": "Hồ con rùa, Dinh độc lập",
+            "plan": "Lên đồ đẹp tạo bộ ảnh xịn",
+            "comment": "chơi với nhau 3 năm rồi mà chưa có tấm hình nhóm nào đẹp hết nên tụi mình quyết định làm bộ ảnh này",
+            "image": "🕒"
+        },
+        {
+            "id": 5,
+            "name": "Chụp kỷ yếu",
+            "date": "31/01/2026",
+            "location": "Trường, công viên",
+            "plan": "Panh mang camera chụp cho hội",
+            "comment": "sắp xa nhau rồi huhuhu",
+            "image": "🕒"
+        },
+        {
+            "id": 6,
+            "name": "Đi chơi sau thi đại học",
+            "date": "13/06/2026",
+            "location": "Vạn Hạnh Mall",
+            "plan": "Đi ăn dooki và chụp photobooth",
+            "comment": "Hy vọng mọi người sẽ đi đầy đủ và enjoy sau khi thi THPTQG xong",
+            "image": "🕒"
+        }
+    ]
+}

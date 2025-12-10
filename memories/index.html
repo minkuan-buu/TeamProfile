@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELISA GENGZ - Group Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="browser-window">
+        <header class="browser-header">
+            <div class="nav-buttons">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-icons" style="margin-left: 10px;">⬅ ➡ 🏠</div>
+            <div class="url-bar">https://www.elisagengz.group</div>
+        </header>
+
+        <div class="main-header">
+            <h1>ELISA GENGZ</h1>
+            <div class="nav-bar">
+                <div class="nav-items">
+                    <a href="/">Thành Viên</a>
+                </div>
+                <div class="nav-items">
+                    <a href="/memories/">Kỷ Niệm</a>
+                </div>
+                <div class="nav-items">
+                    <a href="/activities/">Hoạt Động</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="memories-section">
+            <h3 class="section-title">📸 Góc Kỷ Niệm</h3>
+            <div class="memory-grid" id="memory-grid">
+            </div>
+        </section>
+
+        <footer class="footer-bar">
+            <div>📞 HOTLINE: 1802080813</div>
+            <div>📸 IG: e._elisagang._</div>
+            <div>⭐ RATING: ⭐⭐⭐⭐⭐</div>
+        </footer>
+    </div>
+
+    <div id="memberModal" class="modal-overlay">
+        <div class="modal-container">
+            <span class="close-btn">&times;</span>
+
+            <div class="modal-top-section">
+                <div class="modal-avatar-box">
+                    <div id="modalAvatar" class="avatar-content">👩‍🦰</div>
+                </div>
+
+                <div class="modal-info-box">
+                    <h2 id="modalName">Tên Thành Viên</h2>
+                    <div id="modalRole" style="color: var(--text-sub);" class="modal-role-text">Role ở đây</div>
+                    <div style="font-size: 1.3rem; margin-bottom: 10px;">🎂 <span id="modalDob"></span>
+                    </div>
+
+                    <div class="modal-hobbies-title">Sở thích:</div>
+                    <ul id="modalHobbiesList" class="hobbies-list modal-list-style">
+                    </ul>
+
+                    <div id="modalContact" class="member-contact"
+                        style="font-size: 1.3rem; margin-top: 15px; font-weight: bold; color: var(--deep-purple);">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-bottom-section">
+                <div class="description-box-title">Mô tả ngắn:</div>
+                <div id="modalDescription" class="description-content">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <button id="themeToggle" class="theme-toggle-btn" title="Chuyển chế độ Sáng/Tối">
+        🌞
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

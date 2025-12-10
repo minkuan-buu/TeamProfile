@@ -1,0 +1,79 @@
+{
+    "memories": [
+        {
+            "alt": "trung-thu-lop-10",
+            "image": "../assets/memories/trung-thu-lop-10.jpg",
+            "caption": "Trung thu lớp 10"
+        },
+        {
+            "alt": "tong-ket-lop-11",
+            "image": "../assets/memories/tong-ket-lop-11.PNG",
+            "caption": "Tổng kết lớp 11"
+        },
+        {
+            "alt": "dua-gion-trong-tiet-hoc",
+            "image": "../assets/memories/dua-gion-trong-tiet-hoc.PNG",
+            "caption": "Đùa giỡn trong tiết học"
+        },
+        {
+            "alt": "thi-nghiem-sinh",
+            "image": "../assets/memories/thi-nghiem-sinh.jpg",
+            "caption": "Thí nghiệm sinh"
+        },
+        {
+            "alt": "chua-co-tieu-de-2",
+            "image": "../assets/memories/chua-co-tieu-de-2.HEIC",
+            "caption": "Chưa có tiêu đề 2"
+        },
+        {
+            "alt": "secret-santa",
+            "image": "../assets/memories/secret-santa.JPG",
+            "caption": "Secret Santa"
+        },
+        {
+            "alt": "chua-co-tieu-de-4",
+            "image": "../assets/memories/chua-co-tieu-de-4.JPG",
+            "caption": "Chưa có tiêu đề 4"
+        },
+        {
+            "alt": "tong-ket-1",
+            "image": "../assets/memories/tong-ket-1.JPG",
+            "caption": "Tổng kết 1"
+        },
+        {
+            "alt": "tong-ket-2",
+            "image": "../assets/memories/tong-ket-2.PNG",
+            "caption": "Tổng kết 2"
+        },
+        {
+            "alt": "tong-ket-3",
+            "image": "../assets/memories/tong-ket-3.jpg",
+            "caption": "Tổng kết 3"
+        },
+        {
+            "alt": "daily-1",
+            "image": "../assets/memories/daily-1.jpg",
+            "caption": "Daily 1"
+        },
+        {
+            "alt": "daily-2",
+            "image": "../assets/memories/daily-2.jpg",
+            "caption": "Daily 2"
+        },
+        {
+            "alt": "20-11-1",
+            "image": "../assets/memories/20-11-1.webp",
+            "caption": "20/11 (1)"
+        },
+        {
+            "alt": "20-11-2",
+            "image": "../assets/memories/20-11-2.JPG",
+            "caption": "20/11 (2)"
+        },
+        {
+            "alt": "20-11-3",
+            "image": "../assets/memories/20-11-3.JPG",
+            "caption": "20/11 (3)"
+        }
+    ]
+}

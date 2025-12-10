@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELISA GENGZ - Group Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="activities-style.css">
+</head>
+
+<body>
+
+    <div class="browser-window">
+        <header class="browser-header">
+            <div class="nav-buttons">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-icons" style="margin-left: 10px;">⬅ ➡ 🏠</div>
+            <div class="url-bar">https://www.elisagengz.group</div>
+        </header>
+
+        <div class="main-header">
+            <h1>ELISA GENGZ</h1>
+            <div class="nav-bar">
+                <div class="nav-items">
+                    <a href="/">Thành Viên</a>
+                </div>
+                <div class="nav-items">
+                    <a href="/memories/">Kỷ Niệm</a>
+                </div>
+                <div class="nav-items">
+                    <a href="/activities/">Hoạt Động</a>
+                </div>
+            </div>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchActivityInput" placeholder="Tìm tên hoạt động, địa điểm...">
+            </div>
+        </div>
+
+        <section class="activities-section">
+            <h2 class="section-title">📂 Hồ Sơ Hoạt Động</h2>
+            <div class="folder-grid" id="folder-grid">
+            </div>
+
+            <div id="noResultActivity"
+                style="display: none; text-align: center; font-size: 1.5rem; padding-bottom: 40px;">
+                Không tìm thấy hoạt động nào phù hợp 😿
+            </div>
+        </section>
+
+        <div id="activity-modal" class="modal-overlay">
+            <div class="modal-folder-content">
+                <span class="close-modal">&times;</span>
+
+                <div class="modal-flex">
+                    <div class="modal-image-col">
+                        <div class="photo-frame">
+                            <div id="modal-img"
+                                style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            </div>
+
+                            <div class="tape-corner"></div>
+                        </div>
+                    </div>
+
+                    <div class="modal-info-col">
+                        <h2 id="modal-name">Tên hoạt động</h2>
+                        <div class="info-group">
+                            <p><strong>📅 Ngày:</strong> <span id="modal-date"></span></p>
+                            <p><strong>📍 Địa điểm:</strong> <span id="modal-location"></span></p>
+                            <p><strong>📝 Kế hoạch:</strong> <span id="modal-plan"></span></p>
+                        </div>
+                        <div class="comment-box">
+                            <strong>💭 Cảm nghĩ:</strong>
+                            <p id="modal-comment" class="handwriting-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-bar">
+            <div>📞 HOTLINE: 1802080813</div>
+            <div>📸 IG: e._elisagang._</div>
+            <div>⭐ RATING: ⭐⭐⭐⭐⭐</div>
+        </footer>
+    </div>
+
+    <div id="memberModal" class="modal-overlay">
+        <div class="modal-container">
+            <span class="close-btn">&times;</span>
+
+            <div class="modal-top-section">
+                <div class="modal-avatar-box">
+                    <div id="modalAvatar" class="avatar-content">👩‍🦰</div>
+                </div>
+
+                <div class="modal-info-box">
+                    <h2 id="modalName">Tên Thành Viên</h2>
+                    <div id="modalRole" style="color: var(--text-sub);" class="modal-role-text">Role ở đây</div>
+                    <div style="font-size: 1.3rem; margin-bottom: 10px;">🎂 <span id="modalDob"></span>
+                    </div>
+
+                    <div class="modal-hobbies-title">Sở thích:</div>
+                    <ul id="modalHobbiesList" class="hobbies-list modal-list-style">
+                    </ul>
+
+                    <div id="modalContact" class="member-contact"
+                        style="font-size: 1.3rem; margin-top: 15px; font-weight: bold; color: var(--deep-purple);">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-bottom-section">
+                <div class="description-box-title">Mô tả ngắn:</div>
+                <div id="modalDescription" class="description-content">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <button id="themeToggle" class="theme-toggle-btn" title="Chuyển chế độ Sáng/Tối">
+        🌞
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
